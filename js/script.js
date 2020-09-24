@@ -40,20 +40,27 @@ $(document).ready(function () {
       $('.slider-info__hover').removeClass('active');
    })
 
-   $('.compare__body').niceScroll({
-      emulatetouch: true,
-      horizrailenabled: true,
-      cursorwidth: 9,
-      cursoropacitymin: 1,
-      enablemousewheel: false,
-      sensitiverail: true,
-      background: '#1AB9CE',
-      cursorcolor: '#4da0b9',
-      cursorborder: 'none',
-      cursorborderradius: 0,
-      autohidemode: false,
-      railvalign: 'top',
-   });
+   if ($(window).width() < 769) {
+      $('.compare__body').removeClass('active');
+   }
+   else {
+      $('.compare__body').addClass('active');
+      $('.compare__body.active').niceScroll({
+         emulatetouch: true,
+         horizrailenabled: true,
+         cursorwidth: 9,
+         cursoropacitymin: 1,
+         enablemousewheel: false,
+         sensitiverail: true,
+         background: '#1AB9CE',
+         cursorcolor: '#4da0b9',
+         cursorborder: 'none',
+         cursorborderradius: 0,
+         autohidemode: false,
+         railvalign: 'top',
+      });
+   }
+
 
 
    /* 
