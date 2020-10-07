@@ -78,6 +78,7 @@ input::-webkit-inner-spin-button {
    -webkit-appearance: none;
 }
 .wrapper {
+   overflow: hidden;
    min-height: 100%;
 }
 .content {
@@ -2393,5 +2394,12 @@ main{
       transform: scale(0.85);
    }
 }
-
+@media(min-width: 769px) {
+   .mobile-window {
+      display: none;
+   }
+   .content.active {
+      left: 0;
+   }
+}
 
